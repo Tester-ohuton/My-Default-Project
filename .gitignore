@@ -70,3 +70,143 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+.vsconfig
+Assets/Animation.meta
+Assets/Animator.meta
+Assets/Fonts.meta
+Assets/Images.meta
+Assets/Materials.meta
+Assets/Prefabs.meta
+Assets/Resources.meta
+Assets/Scenes.meta
+Assets/Scripts.meta
+Assets/Sounds.meta
+Assets/Animation/Die.anim.meta
+Assets/Animation/IdleAnim.anim.meta
+Assets/Animation/JumpAnim.anim.meta
+Assets/Animation/Knock.anim.meta
+Assets/Animation/OverSlash.anim.meta
+Assets/Animation/Stab.anim.meta
+Assets/Animation/UnderSlash.anim.meta
+Assets/Animation/WalkAnim.anim.meta
+Assets/Animator/Actor_Anime.controller.meta
+Assets/Animator/Enemy.1.controller.meta
+Assets/Animator/Enemy.2.controller.meta
+Assets/Animator/Enemy.3.controller.meta
+Assets/Animator/My Actor.controller.meta
+Assets/Fonts/Togalite-Black.otf
+Assets/Fonts/Togalite-Black.otf.meta
+Assets/Images/BG.png.meta
+Assets/Images/Ground.png.meta
+Assets/Images/HPゲージ_2.png.meta
+Assets/Images/なべ.png.meta
+Assets/Images/煮干し.png.meta
+Assets/Images/水.png.meta
+Assets/Images/大根.png.meta
+Assets/Images/豆腐.png.meta
+Assets/Images/白みそ.png.meta
+Assets/Images/墓.png.meta
+Assets/Images/餡餅.png.meta
+Assets/Materials/BG 1.mat.meta
+Assets/Materials/BG.mat.meta
+Assets/Prefabs/Dead.prefab.meta
+Assets/Prefabs/Enemy_煮干し.prefab.meta
+Assets/Prefabs/Enemy_水.prefab.meta
+Assets/Prefabs/Enemy_大根.prefab.meta
+Assets/Prefabs/Enemy_豆腐.prefab.meta
+Assets/Prefabs/Enemy_白みそ.prefab.meta
+Assets/Prefabs/Enemy_餡餅.prefab.meta
+Assets/Prefabs/HPUI.prefab.meta
+Assets/Prefabs/Item_煮干し.prefab.meta
+Assets/Prefabs/Item_水.prefab.meta
+Assets/Prefabs/Item_大根.prefab.meta
+Assets/Prefabs/Item_豆腐.prefab.meta
+Assets/Prefabs/Item_白みそ.prefab.meta
+Assets/Prefabs/Item_餡餅.prefab.meta
+Assets/Resources/Enemies.meta
+Assets/Resources/Items.meta
+Assets/Resources/Enemies/0_EnemyData 5.asset.meta
+Assets/Resources/Enemies/1_EnemyData.asset.meta
+Assets/Resources/Enemies/2_EnemyData.asset.meta
+Assets/Resources/Enemies/3_EnemyData.asset.meta
+Assets/Resources/Enemies/4_EnemyData.asset.meta
+Assets/Resources/Enemies/5_EnemyData.asset.meta
+Assets/Resources/Enemies/EnemyDataBase.asset.meta
+Assets/Resources/Items/0_ItemData.asset.meta
+Assets/Resources/Items/1_ItemData.asset.meta
+Assets/Resources/Items/2_ItemData.asset.meta
+Assets/Resources/Items/3_ItemData.asset.meta
+Assets/Resources/Items/4_ItemData.asset.meta
+Assets/Resources/Items/5_ItemData.asset.meta
+Assets/Resources/Items/ItemDataBase.asset.meta
+ProjectSettings/
+Packages/manifest.json
+Packages/packages-lock.json
+Assets/Sounds/BGM.meta
+Assets/Sounds/SE.meta
+Assets/Sounds/
+Assets/Scenes/Game Clear.unity.meta
+Assets/Scenes/Game Over.unity.meta
+Assets/Scenes/Prototype.unity.meta
+Assets/Scripts/My Scripts.meta
+Assets/Scripts/My Scripts/Audio.meta
+Assets/Scripts/My Scripts/Camera.meta
+Assets/Scripts/My Scripts/Const.meta
+Assets/Scripts/My Scripts/Decoration.meta
+Assets/Scripts/My Scripts/Enemys.meta
+Assets/Scripts/My Scripts/Items.meta
+Assets/Scripts/My Scripts/Levels.meta
+Assets/Scripts/My Scripts/Players.meta
+Assets/Scripts/My Scripts/StaticData.meta
+Assets/Scripts/My Scripts/UI.meta
+Assets/Scripts/My Scripts/Weapon.meta
+Assets/Scripts/My Scripts/Audio/SEManager.cs.meta
+Assets/Scripts/My Scripts/Audio/SoundManager.cs.meta
+Assets/Scripts/My Scripts/Camera/CameraCon.cs.meta
+Assets/Scripts/My Scripts/Const/Const.cs.meta
+Assets/Scripts/My Scripts/Decoration/DecorationData.cs.meta
+Assets/Scripts/My Scripts/Decoration/DecorationInfo.cs.meta
+Assets/Scripts/My Scripts/Decoration/DecorationManager.cs.meta
+Assets/Scripts/My Scripts/Decoration/MakeSelect.cs.meta
+Assets/Scripts/My Scripts/Enemys/Enemy.cs.meta
+Assets/Scripts/My Scripts/Enemys/Enemy01Move.cs.meta
+Assets/Scripts/My Scripts/Enemys/Enemy02Move.cs.meta
+Assets/Scripts/My Scripts/Enemys/Enemy03Move.cs.meta
+Assets/Scripts/My Scripts/Enemys/EnemyData.cs.meta
+Assets/Scripts/My Scripts/Enemys/EnemyDataBase.cs.meta
+Assets/Scripts/My Scripts/Enemys/EnemyID.cs.meta
+Assets/Scripts/My Scripts/Enemys/EnemyInfo.cs.meta
+Assets/Scripts/My Scripts/Enemys/EnemyManager.cs.meta
+Assets/Scripts/My Scripts/Enemys/EnemyNum.cs.meta
+Assets/Scripts/My Scripts/Enemys/EnemyStatus.cs.meta
+Assets/Scripts/My Scripts/Enemys/MyEnemy.cs.meta
+Assets/Scripts/My Scripts/Items/ItemData.cs.meta
+Assets/Scripts/My Scripts/Items/ItemDataBase.cs.meta
+Assets/Scripts/My Scripts/Items/ItemInfo.cs.meta
+Assets/Scripts/My Scripts/Items/ItemNum.cs.meta
+Assets/Scripts/My Scripts/Items/MyItem.cs.meta
+Assets/Scripts/My Scripts/Levels/Quest_Level_1.cs.meta
+Assets/Scripts/My Scripts/Players/DropItem.cs.meta
+Assets/Scripts/My Scripts/Players/GroundCheck3D.cs.meta
+Assets/Scripts/My Scripts/Players/HpBarCtrl.cs.meta
+Assets/Scripts/My Scripts/Players/HPUIRotate.cs.meta
+Assets/Scripts/My Scripts/Players/KnockBack.cs.meta
+Assets/Scripts/My Scripts/Players/Player.cs.meta
+Assets/Scripts/My Scripts/Players/PlayerItem.cs.meta
+Assets/Scripts/My Scripts/Players/PlayerStatus.cs.meta
+Assets/Scripts/My Scripts/Players/Sword.cs.meta
+Assets/Scripts/My Scripts/Players/TargetPlayer.cs.meta
+Assets/Scripts/My Scripts/StaticData/StaticClear.cs.meta
+Assets/Scripts/My Scripts/StaticData/StaticDecoration.cs.meta
+Assets/Scripts/My Scripts/StaticData/StaticEnemy.cs.meta
+Assets/Scripts/My Scripts/StaticData/StaticItem.cs.meta
+Assets/Scripts/My Scripts/StaticData/StaticStatus.cs.meta
+Assets/Scripts/My Scripts/UI/BaseLayer.cs.meta
+Assets/Scripts/My Scripts/UI/end.cs.meta
+Assets/Scripts/My Scripts/UI/Fade.meta
+Assets/Scripts/My Scripts/UI/FadeGame.cs.meta
+Assets/Scripts/My Scripts/UI/LoopMotion.cs.meta
+Assets/Scripts/My Scripts/UI/ScrollBG.cs.meta
+Assets/Scripts/My Scripts/UI/Fade/FadeManager.cs.meta
+Assets/Scripts/My Scripts/Weapon/AttackContoroll.cs.meta
+Assets/Resources/Enemies/0_EnemyData.asset.meta

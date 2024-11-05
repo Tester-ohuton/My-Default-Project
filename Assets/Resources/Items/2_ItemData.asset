@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 2_ItemData
   m_EditorClassIdentifier: 
   itemType: 2
-  icon: {fileID: 0}
-  itemName: 
+  icon: {fileID: 21300000, guid: 204220d67fb795746a70d58523304906, type: 3}
+  itemName: "\u306B\u307C\u3057"
   Num: 0

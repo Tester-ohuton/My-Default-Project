@@ -40,12 +40,15 @@ public class AttackContoroll : MonoBehaviour
 			AttackCnt = 0;
 		}
 	}
-
-    void OnTriggerEnter2D(Collider2D t)
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+    }
+    void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("A");
         // オブジェクトタグがEnemyのとき
-        if (!hitflg && t.CompareTag("Enemy"))
+        if (!hitflg && collision.CompareTag("Enemy"))
         {
             if (se != null)
             {
@@ -53,12 +56,12 @@ public class AttackContoroll : MonoBehaviour
                 se.GetComponent<SEManager>().PlaySE(1);
             }
             // 敵キャラを倒したかを取得
-            enemyInfo = t.gameObject.GetComponent<EnemyInfo>();
+            enemyInfo = collision.gameObject.GetComponent<EnemyInfo>();
             
-            enemy = t.gameObject.GetComponent<Enemy>();
+            enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null && enemy.IsHitFlag()) return;
 
-            enemyStatus = t.gameObject.GetComponent<EnemyStatus>();
+            enemyStatus = collision.gameObject.GetComponent<EnemyStatus>();
 
             hitflg = true;
 

@@ -210,3 +210,12 @@ Assets/Scripts/My Scripts/UI/ScrollBG.cs.meta
 Assets/Scripts/My Scripts/UI/Fade/FadeManager.cs.meta
 Assets/Scripts/My Scripts/Weapon/AttackContoroll.cs.meta
 Assets/Resources/Enemies/0_EnemyData.asset.meta
+Assets/Animation/PlayerAnims.meta
+Assets/Animation/PlayerAnims/Die.anim.meta
+Assets/Animation/PlayerAnims/IdleAnim.anim.meta
+Assets/Animation/PlayerAnims/JumpAnim.anim.meta
+Assets/Animation/PlayerAnims/Knock.anim.meta
+Assets/Animation/PlayerAnims/OverSlash.anim.meta
+Assets/Animation/PlayerAnims/Stab.anim.meta
+Assets/Animation/PlayerAnims/UnderSlash.anim.meta
+Assets/Animation/PlayerAnims/WalkAnim.anim.meta

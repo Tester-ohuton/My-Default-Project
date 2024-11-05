@@ -172,12 +172,12 @@ public class Player : MonoBehaviour
                 anime.GetCurrentAnimatorStateInfo(0).IsName("Stab"))
             {
                 // はさみの当たり判定オン
-                scissors1.GetComponent<MeshCollider>().enabled = true;
+                scissors1.GetComponent<Collider2D>().enabled = true;
             }
             else
             {
                 // はさみの当たり判定をオフ
-                scissors1.GetComponent<MeshCollider>().enabled = false;
+                scissors1.GetComponent<Collider2D>().enabled = false;
                 // 攻撃ヒット判定用フラグオフ
                 scissors1.GetComponent<AttackContoroll>().SethitFlg(false);
             }

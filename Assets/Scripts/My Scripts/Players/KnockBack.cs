@@ -97,7 +97,7 @@ public class KnockBack : MonoBehaviour
                 
                 if (enemyStatus.GetATK() - StaticStatus.GetPlayerDEF() > 0)
                 {
-                    Debug.Log(enemyStatus.GetATK() - StaticStatus.GetPlayerDEF());
+                    //Debug.Log(enemyStatus.GetATK() - StaticStatus.GetPlayerDEF());
                     playerStatus.SetMinusHp(enemyStatus.GetATK() - StaticStatus.GetPlayerDEF());
                 }
                 // ÇOà»â∫Ç»ÇÁç≈í·ÇPÉ_ÉÅÅ[ÉW

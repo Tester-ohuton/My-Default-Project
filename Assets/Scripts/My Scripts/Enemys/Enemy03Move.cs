@@ -223,7 +223,7 @@ public class Enemy03Move : MonoBehaviour
 
                     if (!isDead)
                     {
-                        StaticEnemy.IsUpdate = false;
+                        StaticEnemy.IsUpdate = true;
                         isDead = true;
                     }
                 }
@@ -338,9 +338,9 @@ public class Enemy03Move : MonoBehaviour
         {
             // ぶつかったら歩き
             animator.SetBool("isCollide", true);
-            //// 初期位置へ戻るモードへ
-            //curMode = EnemyMode.BACK;
-            Debug.Log("ぶつかった");
+            
+            //// 歩行モードへ
+            curMode = Enemy03Mode.WALK;
         }
         //curMode = EnemyMode.WALK;
     }
@@ -353,7 +353,6 @@ public class Enemy03Move : MonoBehaviour
         {
             // ぶつかって離れたら
             animator.SetBool("isCollide", false);
-
         }
     }
 }

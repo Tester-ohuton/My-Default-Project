@@ -276,7 +276,7 @@ public class Enemy02Move : MonoBehaviour
 
                     if (!isDead)
                     {
-                        StaticEnemy.IsUpdate = false;
+                        StaticEnemy.IsUpdate = true;
                         isDead = true;
                     }
                 }
@@ -394,10 +394,10 @@ public class Enemy02Move : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // ぶつかったら歩き
-            //animator.SetBool("isCollide", true);
-            //// 初期位置へ戻るモードへ
-            //curMode = EnemyMode.BACK;
-            Debug.Log("ぶつかった");
+            animator.SetBool("isCollide", true);
+
+            //// 歩行モードへ
+            curMode = Enemy02Mode.WALK;
         }
         //curMode = EnemyMode.WALK;
     }
@@ -409,8 +409,7 @@ public class Enemy02Move : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // ぶつかって離れたら
-            //animator.SetBool("isCollide", false);
-
+            animator.SetBool("isCollide", false);
         }
     }
 }

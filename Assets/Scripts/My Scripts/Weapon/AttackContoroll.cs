@@ -40,13 +40,9 @@ public class AttackContoroll : MonoBehaviour
 			AttackCnt = 0;
 		}
 	}
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        
-    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("A");
         // オブジェクトタグがEnemyのとき
         if (!hitflg && collision.CompareTag("Enemy"))
         {
@@ -55,11 +51,12 @@ public class AttackContoroll : MonoBehaviour
                 // 攻撃ヒット音
                 se.GetComponent<SEManager>().PlaySE(1);
             }
+
             // 敵キャラを倒したかを取得
             enemyInfo = collision.gameObject.GetComponent<EnemyInfo>();
             
             enemy = collision.gameObject.GetComponent<Enemy>();
-            if (enemy != null && enemy.IsHitFlag()) return;
+            if (enemy == null && enemy.IsHitFlag()) return;
 
             enemyStatus = collision.gameObject.GetComponent<EnemyStatus>();
 

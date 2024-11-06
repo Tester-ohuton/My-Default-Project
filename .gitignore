@@ -219,3 +219,17 @@ Assets/Animation/PlayerAnims/OverSlash.anim.meta
 Assets/Animation/PlayerAnims/Stab.anim.meta
 Assets/Animation/PlayerAnims/UnderSlash.anim.meta
 Assets/Animation/PlayerAnims/WalkAnim.anim.meta
+WebglBuild/
+Assets/Textures/Sprites.meta
+Assets/Textures.meta
+Assets/Images/
+Assets/Textures/Sprites/toonExplosionFree.meta
+Assets/Textures/Sprites/toonExplosionFree/Example.meta
+Assets/Textures/Sprites/toonExplosionFree/Materials.meta
+Assets/Textures/Sprites/toonExplosionFree/sprite_toonExplosion_a.psd
+Assets/Textures/Sprites/toonExplosionFree/sprite_toonExplosion_a.psd.meta
+Assets/Textures/Sprites/toonExplosionFree/Example/exampleExplosionEffect.prefab
+Assets/Textures/Sprites/toonExplosionFree/Example/exampleExplosionEffect.prefab.meta
+Assets/Textures/Sprites/toonExplosionFree/Materials/sprite_toonExplosion_a.mat
+Assets/Textures/Sprites/toonExplosionFree/Materials/sprite_toonExplosion_a.mat.meta
+Assets/Scenes/Title.unity.meta

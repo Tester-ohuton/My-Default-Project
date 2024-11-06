@@ -97,6 +97,14 @@ public class Enemy03Move : MonoBehaviour
         thistrans = this.transform;
         pos = thistrans.position;
 
+        /*
+        // 歩く範囲外に出た場合、初期位置に戻るためにBACKモードに設定
+        if (Mathf.Abs(thistrans.position.x - initPos.x) > walkRange)
+        {
+            curMode = Enemy03Mode.BACK;
+        }
+        */
+
         // 体力０になったらモード変更
         if (status.GetHp() <= 0)
         {

@@ -66,6 +66,14 @@ public class Enemy02Move : MonoBehaviour
     {
         pos = thistrans.position;
 
+        /*
+        // 歩く範囲外に出た場合、初期位置に戻るためにBACKモードに設定
+        if (Mathf.Abs(thistrans.position.x - initPos.x) > walkRange)
+        {
+            curMode = Enemy02Mode.BACK;
+        }
+        */
+
         if (status.GetHp() <= 0)
         {
             curMode = Enemy02Mode.DIE;
@@ -214,7 +222,7 @@ public class Enemy02Move : MonoBehaviour
         {
             if (Mathf.Abs(initPos.y - thistrans.position.y) > 0.01f)
             {
-                pos.y += newDir.y * Time.deltaTime * 10;
+                pos.y += newDir.y * Time.deltaTime * 5;
             }
         }
 

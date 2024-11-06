@@ -162,7 +162,7 @@ public class Player : MonoBehaviour
     private void AttackMotion()
     {
         // çUåÇÇPäJén
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return)||Input.GetMouseButtonDown(0))
         {
             anime.SetTrigger("Attack");
 

@@ -31,6 +31,8 @@ public class KnockBack : MonoBehaviour
     // 子のRendererの配列
     Renderer[] childrenRenderer;
 
+    SpriteRenderer spriteRenderer;
+
     // 今childRendererが有効か無効化のフラグ
     bool isEnabledRenderers;
 
@@ -59,6 +61,8 @@ public class KnockBack : MonoBehaviour
 
     Animator anime;
 
+    GameObject se;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,8 +73,11 @@ public class KnockBack : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
 
         childrenRenderer = GetComponentsInChildren<Renderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         anime = GetComponent<Animator>();
+
+        se = GameObject.Find("SE");
     }
 
     // Update is called once per frame
@@ -111,7 +118,8 @@ public class KnockBack : MonoBehaviour
 
             // プレイヤー仰け反る（ヒットストップ？）
             case 1:
-                
+
+                spriteRenderer.color = new Color(0.5f, 0, 0, 1f);
 
                 // レイヤーをInvisibleに変更(当たり判定をなくす)
                 this.gameObject.layer = LayerMask.NameToLayer("Invisible");
@@ -232,6 +240,8 @@ public class KnockBack : MonoBehaviour
 
             if (flickerDuration <= flickerTotalElapsedTime)
             {
+                spriteRenderer.color = new Color(1, 1, 1, 1);
+
                 //ここが被ダメージ点滅の終了時の処理。
                 isDamaged = false;
 
@@ -259,6 +269,11 @@ public class KnockBack : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy" && !isStart)
         {
+            if (se != null)
+            {
+                // 攻撃ヒット音
+                se.GetComponent<SEManager>().PlaySE(2);
+            }
 
             // プレイヤーが止まっている時
             // 敵と衝突

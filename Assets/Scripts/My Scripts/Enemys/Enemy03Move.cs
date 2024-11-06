@@ -206,11 +206,17 @@ public class Enemy03Move : MonoBehaviour
 
             case Enemy03Mode.DIE:
                 // デバッグ用
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Return))
                 {
                     if (enemy != null)
                     {
                         enemy.SetIsDead(true);
+                    }
+
+                    if (!isDead)
+                    {
+                        StaticEnemy.IsUpdate = true;
+                        isDead = true;
                     }
                 }
 
@@ -318,8 +324,7 @@ public class Enemy03Move : MonoBehaviour
                 break;
 
             case 1:
-                // ノックバック処理終了
-                isStart = false;
+                
                 // 処理順を最初に戻す
                 Step = 0;
                 // ノックバック前のモードに戻す
@@ -353,6 +358,9 @@ public class Enemy03Move : MonoBehaviour
         {
             // ぶつかって離れたら
             animator.SetBool("isCollide", false);
+
+            // ノックバック処理終了
+            isStart = false;
         }
     }
 }

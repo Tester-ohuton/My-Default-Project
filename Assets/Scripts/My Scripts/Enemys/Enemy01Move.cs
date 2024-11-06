@@ -18,6 +18,8 @@ public class Enemy01Move : MonoBehaviour
     // 現在のモードをインスペクタで設定可能にする
     [SerializeField] private Enemy01Mode curMode;
 
+    [SerializeField] private Enemy01Mode initialMode = Enemy01Mode.WALK;
+
     // 各モードごとのカスタマイズ用パラメータ
     [Header("Movement Parameters")]
     [SerializeField] private float walkRange = 2.0f;      // 歩く範囲(ゲーム開始時のスポーン位置を起点)
@@ -38,9 +40,8 @@ public class Enemy01Move : MonoBehaviour
     private float KnockTime = 0.0f;
     private int Step;
     private bool isStart = false;
-    private Enemy01Mode preMode;
+    [SerializeField] private Enemy01Mode preMode;
     private bool isDead = false;
-    private bool isKnockedBack = false; // ノックバック中のフラグ
     private Enemy enemy;
     private EnemyStatus status;
     [SerializeField] private float dir;
@@ -56,6 +57,9 @@ public class Enemy01Move : MonoBehaviour
         initPos = this.transform.position;
         playerObj = GameObject.Find("Actor");
         player = playerObj.GetComponent<Player>();
+
+        curMode = initialMode;
+
         dir = 1;
         scissors = GameObject.Find("scissors1");
         Step = 0;
@@ -144,11 +148,17 @@ public class Enemy01Move : MonoBehaviour
                 break;
 
             case Enemy01Mode.DIE:
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Return))
                 {
                     if (enemy != null)
                     {
                         enemy.SetIsDead(true);
+                    }
+
+                    if (!isDead)
+                    {
+                        StaticEnemy.IsUpdate = true;
+                        isDead = true;
                     }
                 }
 
@@ -187,7 +197,6 @@ public class Enemy01Move : MonoBehaviour
             case Enemy01Mode.KNOCK:
                 if (isStart)
                 {
-                    animator.SetBool("isKnock", true);
                     KnockBack();
                 }
                 break;
@@ -220,40 +229,35 @@ public class Enemy01Move : MonoBehaviour
     {
         switch (Step)
         {
+            // プレイヤー仰け反る（ヒットストップ？）
             case 0:
+                // 自分の位置と接触したオブジェクトの位置を計算して
+                // 距離と方向を出して正規化
                 Vector3 distination = new Vector3((this.transform.position.x - player.transform.position.x), 0, 0).normalized;
 
+                // ノックバックアニメが再生されている間
                 if (animator.GetCurrentAnimatorStateInfo(0).IsName("Knock"))
                 {
+                    // ノックバック
                     pos.x += distination.x * Time.deltaTime;
                 }
-
+                // 再生されているアニメが終わったら
                 if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
                 {
+                    // 移動完了したら次のステップへ
                     Step++;
                 }
                 break;
 
             case 1:
-                isStart = false;
+
+                // 処理順を最初に戻す
                 Step = 0;
+                // ノックバック前のモードに戻す
                 curMode = preMode;
+                // ノックバックアニメ終了
                 animator.SetBool("isKnock", false);
-
-                // ノックバック完了フラグを立てる
-                isKnockedBack = true;
                 break;
-        }
-    }
-
-    // 攻撃を受けたときにノックバック開始
-    public void OnHitByAttack()
-    {
-        // ノックバックが完了していれば、新たにノックバックを実行可能
-        if (!isKnockedBack)
-        {
-            preMode = curMode;
-            curMode = Enemy01Mode.KNOCK;
         }
     }
 
@@ -264,18 +268,6 @@ public class Enemy01Move : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             animator.SetBool("isCollide", true);
-
-            // ノックバック処理完了後、プレイヤーと再度接触したときにフラグをリセット
-            isKnockedBack = false;
-
-            // AttackContorollが再度当たった場合
-            AttackContoroll attackContoroll = collision.gameObject.GetComponent<AttackContoroll>();
-
-            if(attackContoroll != null)
-            {
-                Debug.Log("AttackContoroll");
-                OnHitByAttack();
-            }
         }
     }
 
@@ -285,6 +277,7 @@ public class Enemy01Move : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             animator.SetBool("isCollide", false);
+            isStart = false;
         }
     }
 }
